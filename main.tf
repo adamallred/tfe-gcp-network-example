@@ -29,19 +29,7 @@ resource "google_compute_firewall" "allow-http" {
 
   allow {
     protocol = "tcp"
-    ports    = ["8080"]
-  }
-
-  source_tags = ["web"]
-}
-
-resource "google_compute_firewall" "allow-ssh" {
-  name    = "test-firewall-ssh"
-  network = "${module.demo-vpc.name}"
-
-  allow {
-    protocol = "tcp"
-    ports    = ["22"]
+    ports    = ["22", "8080"]
   }
 
   source_tags = ["web"]
