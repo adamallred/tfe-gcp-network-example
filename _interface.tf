@@ -1,6 +1,6 @@
 variable "region" {
   description = "The region in which to deploy."
-  default = "us-east1"
+  default     = "us-east1"
 }
 
 variable "network_name" {
@@ -21,4 +21,8 @@ output "name" {
 
 output "region" {
   value = "${var.region}"
+}
+
+output "subnetwork_self_link" {
+  value = "${module.subnet-demo-vpc.self_link}"
 }

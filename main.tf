@@ -3,8 +3,8 @@ provider "google" {
 }
 
 module "demo-vpc" {
-  source = "tasdikrahman/network/google"
-  name   = "${var.network_name}"
+  source                  = "tasdikrahman/network/google"
+  name                    = "${var.network_name}"
   auto_create_subnetworks = false
 }
 
