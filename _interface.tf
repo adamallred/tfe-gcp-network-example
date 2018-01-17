@@ -7,10 +7,14 @@ variable "network_name" {
   description = "The name of the network to be created."
 }
 
+variable "ip_cidr_range" {
+  description = "The IP range to create."
+}
+
 output "network_self_link" {
-  value = "${module.this.self_link}"
+  value = "${module.demo-vpc.self_link}"
 }
 
 output "name" {
-  value = "${module.this.name}"
+  value = "${module.demo-vpc.name}"
 }
