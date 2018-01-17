@@ -18,3 +18,7 @@ output "network_self_link" {
 output "name" {
   value = "${module.demo-vpc.name}"
 }
+
+output "region" {
+  value = "${var.region}"
+}
