@@ -11,6 +11,9 @@ variable "ip_cidr_range" {
   description = "The IP range to create."
 }
 
+variable "billing_account" {
+}
+
 output "network_self_link" {
   value = "${module.demo-vpc.self_link}"
 }
