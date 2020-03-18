@@ -2,6 +2,14 @@ provider "google" {
   region = "${var.region}"
 }
 
+# make the project
+resource "google_project" "rsg-tfe-poc-1" {
+  name            = "rsg-tfe-poc-1"
+  project_id      = "rsg-tfe-poc-1"
+  folder_id       = "537099506332"
+  billing_account = "${var.billing_account}"
+}
+
 # Create VPC
 module "demo-vpc" {
   source                  = "tasdikrahman/network/google"
